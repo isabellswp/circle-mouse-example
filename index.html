@@ -1,0 +1,33 @@
+<div class = "circle">
+  hellow
+</div>
+
+<style>
+.circle {
+  /*position: relative;*/
+  height: 100px; /*set circle size*/
+  width: 100px;
+  background: red; /*set circle color*/
+  border-radius: 50%; 
+  
+  /*set circle pos*/
+  position: fixed;
+  top: calc(50vh - 50px);
+  left: calc(50vw - 50px);
+  
+  /*set text pos*/
+  text-align: center;
+  line-height: 100px;
+  color: white;
+}
+  
+  </style>
+
+  <script>
+  /*console.log(wwindow);*/
+window.addEventListener("mousemove", function(event) {
+  console.log(event.clientX);
+  document.getElementsByClassName("circle")[0].style.top = (event.clientY - 50) + "px";
+  document.getElementsByClassName("circle")[0].style.left = (event.clientX - 50) + "px";
+});
+</script>
